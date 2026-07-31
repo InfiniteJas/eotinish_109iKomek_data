@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block title %}Личный кабинет — Кофейня 109iKomek{% endblock %}
+
+{% block content %}
+  <div class="profile-container">
+    <h2>Личный кабинет</h2>
+    <p class="welcome">Добро пожаловать, <strong>{{ session.username }}</strong>!</p>
+
+    <h3>История заказов</h3>
+    {% if orders %}
+      <table class="orders-table">
+        <thead>
+          <tr>
+            <th>Название</th>
+            <th>Кол-во</th>
+            <th>Сумма</th>
+            <th>Дата</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for order in orders %}
+            <tr>
+              <td>{{ order.item_name }}</td>
+              <td>{{ order.quantity }}</td>
+              <td>{{ order.total }} ₸</td>
+              <td>{{ order.created }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    {% else %}
+      <p>У вас пока нет заказов.</p>
+    {% endif %}
+  </div>
+{% endblock %}

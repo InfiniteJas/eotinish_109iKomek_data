@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}Вход — Кофейня 109iKomek{% endblock %}
+
+{% block content %}
+  <div class="auth-container">
+    <h2>Вход</h2>
+    <form method="post" class="auth-form">
+      <label for="username">Имя пользователя</label>
+      <input type="text" name="username" id="username" required autofocus>
+
+      <label for="password">Пароль</label>
+      <input type="password" name="password" id="password" required>
+
+      <button type="submit" class="btn btn-primary btn-block">Войти</button>
+    </form>
+    <p class="auth-switch">Ещё нет аккаунта? <a href="{{ url_for('register') }}">Зарегистрироваться</a></p>
+  </div>
+{% endblock %}

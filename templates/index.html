@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <section class="hero">
+    <h1>Добро пожаловать в Кофейню 109iKomek</h1>
+    <p>Ароматный кофе, уютная атмосфера и лучшие десерты в городе.</p>
+  </section>
+
+  <section class="menu">
+    <h2>Наше меню</h2>
+    <div class="menu-grid">
+      {% for item in menu %}
+        <article class="menu-card">
+          <div class="menu-card-placeholder">☕</div>
+          <h3>{{ item.name }}</h3>
+          <p class="menu-desc">{{ item.description }}</p>
+          <p class="menu-price">{{ item.price }} ₸</p>
+          {% if session.user_id %}
+            <form action="{{ url_for('order', menu_id=item.id) }}" method="post" class="order-form">
+              <label>
+                Кол-во:
+                <input type="number" name="quantity" value="1" min="1" max="10" class="qty-input">
+              </label>
+              <button type="submit" class="btn btn-primary">Заказать</button>
+            </form>
+          {% else %}
+            <p class="login-hint"><a href="{{ url_for('login') }}">Войдите</a>, чтобы заказать.</p>
+          {% endif %}
+        </article>
+      {% else %}
+        <p>Меню пока пусто.</p>
+      {% endfor %}
+    </div>
+  </section>
+{% endblock %}
