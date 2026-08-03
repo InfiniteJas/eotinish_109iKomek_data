@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block title %}Вход — Кофейня{% endblock %}
+{% block content %}
+<h2>Вход в личный кабинет</h2>
+<form method="POST" action="{{ url_for('login') }}">
+  <label>Имя пользователя</label>
+  <input type="text" name="username" required>
+  <label>Пароль</label>
+  <input type="password" name="password" required>
+  <button class="btn" type="submit">Войти</button>
+</form>
+<p>Нет аккаунта? <a href="{{ url_for('register') }}">Зарегистрироваться</a></p>
+<p class="hint">Тестовый пользователь: <strong>test / test123</strong></p>
+{% endblock %}

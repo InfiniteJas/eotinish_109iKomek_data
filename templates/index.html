@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block title %}Главная — Кофейня{% endblock %}
+{% block content %}
+<section class="hero">
+  <h1>Добро пожаловать в ☕ 109iKomek</h1>
+  <p>Ароматный кофе, уютная атмосфера и лучшие десерты в городе.</p>
+  <a class="btn" href="{{ url_for('login') }}">Войти в личный кабинет</a>
+</section>
+<section class="menu">
+  <h2>Наше меню</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>Эспрессо</h3>
+      <p>Классический итальянский кофе.</p>
+      <span class="price">750 ₸</span>
+    </div>
+    <div class="card">
+      <h3>Капучино</h3>
+      <p>Нежная молочная пенка и насыщенный вкус.</p>
+      <span class="price">1 200 ₸</span>
+    </div>
+    <div class="card">
+      <h3>Латте</h3>
+      <p>Мягкий кофе с большим количеством молока.</p>
+      <span class="price">1 350 ₸</span>
+    </div>
+    <div class="card">
+      <h3>Американо</h3>
+      <p>Для тех, кто любит кофе крепче.</p>
+      <span class="price">900 ₸</span>
+    </div>
+  </div>
+</section>
+{% endblock %}

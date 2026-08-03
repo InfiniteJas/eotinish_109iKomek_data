@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %}Кабинет — Кофейня{% endblock %}
+{% block content %}
+<h2>Личный кабинет</h2>
+<p>Привет, <strong>{{ current_user.username }}</strong>!</p>
+<p>Email: {{ current_user.email }}</p>
+<div class="cards">
+  <div class="card">
+    <h3>Бонусы</h3>
+    <p>У вас <strong>150</strong> бонусных баллов.</p>
+  </div>
+  <div class="card">
+    <h3>История заказов</h3>
+    <p>Пока нет заказов. Сделайте первый!</p>
+  </div>
+</div>
+{% endblock %}

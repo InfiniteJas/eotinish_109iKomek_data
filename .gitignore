@@ -1,0 +1,9 @@
+coffee.db
+app.log
+cookies.txt
+__pycache__/
+*.pyc
+.venv/
+env/
+.vscode/
+.idea/

@@ -1,0 +1,15 @@
+nohup: ignoring input
+127.0.0.1 - - [31/Jul/2026 10:29:52] "GET /technical_analysis.html HTTP/1.1" 200 -
+127.0.0.1 - - [31/Jul/2026 10:29:54] "GET /technical_analysis.html HTTP/1.1" 200 -
+127.0.0.1 - - [31/Jul/2026 10:29:54] code 404, message File not found
+127.0.0.1 - - [31/Jul/2026 10:29:54] "GET /favicon.ico HTTP/1.1" 404 -
+172.23.0.1 - - [31/Jul/2026 10:30:09] "GET /?t=1785493808979 HTTP/1.1" 200 -
+172.23.0.1 - - [31/Jul/2026 10:30:14] "GET /technical_analysis.html HTTP/1.1" 200 -
+172.23.0.1 - - [31/Jul/2026 10:43:00] "GET /?t=1785494580612 HTTP/1.1" 200 -
+172.23.0.1 - - [31/Jul/2026 10:43:03] "GET /technical_analysis.html HTTP/1.1" 304 -
+172.23.0.1 - - [31/Jul/2026 10:45:14] "GET /technical_analysis.html?t=1785494714712 HTTP/1.1" 200 -
+172.23.0.1 - - [31/Jul/2026 10:45:32] "GET /technical_analysis.html HTTP/1.1" 200 -
+172.23.0.1 - - [31/Jul/2026 10:45:33] code 404, message File not found
+172.23.0.1 - - [31/Jul/2026 10:45:33] "GET /favicon.ico HTTP/1.1" 404 -
+172.23.0.1 - - [31/Jul/2026 11:22:36] "GET /?t=1785496956542 HTTP/1.1" 200 -
+172.23.0.1 - - [31/Jul/2026 11:22:38] "GET /technical_analysis.html HTTP/1.1" 304 -
